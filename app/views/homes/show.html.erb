@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @home.name %></h2>
+<%= @home.street_address %><br>
+<%= @home.city %><br>
+<%= @home.state %><br>
+<%= @home.zip_code %><br>
+
+
+<h3>Rooms</h3>
+<ol>
+<% @rooms.each do |room| %>
+  <li> <%= room.name %> - <%= link_to 'Edit', '#' %> | <%= link_to 'Delete', home_room_path(@home, room), method: :delete, data: { confirm: "Sure you want to delete this room?" } %></li>
+<% end %>
+</ol>
+
+<%= link_to 'Add Room', new_home_room_path(@home) %><br>
+
+<%= link_to 'Edit Home', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>

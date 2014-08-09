@@ -1,0 +1,12 @@
+<h1>Your Homes</h1>
+
+  <% @homes.each do |home| %>
+    <%= home.name %>
+    <%= link_to 'Show', home %>
+    <%= link_to 'Edit', edit_home_path(home) %>
+    <%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+
+<br>
+
+<%= link_to 'New Home', new_home_path %>
