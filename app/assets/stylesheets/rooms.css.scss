@@ -1,0 +1,9 @@
+div#items-list {
+  span {
+    display: block;
+  }
+  span.item-description {
+    margin-left: 20px;
+    font-style: italic;
+  }
+}

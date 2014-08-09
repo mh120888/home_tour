@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :homes do
-    resources :rooms
+  resources :homes, shallow: true do
+    resources :rooms, shallow: true do
+      resources :items
+    end
   end
 
   root 'homes#index'

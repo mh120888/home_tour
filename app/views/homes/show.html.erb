@@ -10,7 +10,7 @@
 <h3>Rooms</h3>
 <ol>
 <% @rooms.each do |room| %>
-  <li> <%= room.name %> - <%= link_to 'Edit', '#' %> | <%= link_to 'Delete', home_room_path(@home, room), method: :delete, data: { confirm: "Sure you want to delete this room?" } %></li>
+  <li> <%= link_to room.name, room_path(room) %> - <%= link_to 'Edit', '#' %> | <%= link_to 'Delete', room_path(room), method: :delete, data: { confirm: "Sure you want to delete this room?" } %></li>
 <% end %>
 </ol>
 

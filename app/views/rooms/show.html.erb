@@ -1,0 +1,15 @@
+<h1><%= @room.name %></h1>
+
+<div id='items-list'>
+  <h2>Items</h2>
+  <ol>
+  <% @items.each do |item| %>
+    <li>
+      <span class='item-name'><%= item.name %> | <%= link_to 'Delete', item_path(item), method: :delete, data: { confirm: 'Sure you want to delete?' } %></span> 
+      <span class='item-description'><%= item.description %></span>
+    </li>
+  <% end %>
+  </ol>
+</div>
+
+<%= link_to 'Add Item', new_room_item_path(@room) %>
