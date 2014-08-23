@@ -1,12 +1,9 @@
-<h1>Your Homes</h1>
+<h1>Holiday Home Tour</h1>
+  <section ng-controller='homesController as homes'>
+    <h2>Homes</h2>
+      <div id='homes' ng-repeat="home in homes.homes">
+        <home-description></home-description>
+      </div>
+    <%= link_to 'New Home', new_home_path %>
 
-  <% @homes.each do |home| %>
-    <%= home.name %>
-    <%= link_to 'Show', home %>
-    <%= link_to 'Edit', edit_home_path(home) %>
-    <%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-
-<br>
-
-<%= link_to 'New Home', new_home_path %>
+  </section>

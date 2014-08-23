@@ -1,0 +1,31 @@
+@import "colors";
+
+body {
+  font-family: Helvetica;
+  // background: $green4;
+  // color: white;
+  font-weight: 100;
+  text-align: center;
+  // a {
+  //   color: red;
+  //   text-decoration: none;
+  //   transition: color 0.5s;
+  //   &:hover {
+  //     color: white;
+  //     transition: color 0.5s;
+  //   }
+  //   &.button {
+  //     color: green;
+  //     padding: 12px;
+  //     background-color: white;
+  //     &:hover {
+  //       color: red;
+  //       transition: color 0.5s;
+  //     }
+  //   }
+  // }
+  ul {
+    list-style: none;
+  }
+}
+

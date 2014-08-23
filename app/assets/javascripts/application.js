@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require angular
+
+
+var hometourApp = angular.module('hometourApp', []);
+
+hometourApp.controller('homesController', ['$http', function ($http) {
+  var homes = this;
+  $http.get('/homes.json').success(function(data){
+    homes.homes = data.homes;
+  });
+}]);
+
+hometourApp.directive('homeDescription', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'home-description.html'
+  }
+})

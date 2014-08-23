@@ -5,6 +5,11 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
+    # homes_as_json = Home.all.to_a.map! { |home| home.to_json }
+    respond_to do |format|
+      format.html
+      format.json { render json: @homes }
+    end
   end
 
   # GET /homes/1
@@ -12,6 +17,10 @@ class HomesController < ApplicationController
   def show
     @home = Home.find(params[:id])
     @rooms = @home.rooms
+    respond_to do |format|
+      format.html
+      format.json { render json: { home: @home, rooms: @rooms } }
+    end
   end
 
   # GET /homes/new

@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'angularjs-rails'
+
+gem 'active_model_serializers'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
